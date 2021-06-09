@@ -41,5 +41,7 @@ public class Mensajes {
         System.out.println(SUPER_EFICAZ);
     }
 
-    public static void atacar
+    public static void atacar(){
+
+    }
 }

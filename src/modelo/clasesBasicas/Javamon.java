@@ -36,7 +36,7 @@ public class Javamon {
 
     //Constructor con parámetros
 
-    public Javamon(int codigoJavamon, String nombre, Tipo tipo, String descripcion, int nivel, int salud, int danho, int velocidad, boolean starter, Ataque[] ataques) {
+    public Javamon(int codigoJavamon, String nombre, Tipo tipo, String descripcion, int nivel, int salud, int danho, int velocidad, boolean starter) {
         this.codigoJavamon = codigoJavamon;
         this.nombre = nombre;
         this.tipo = tipo;
@@ -46,8 +46,23 @@ public class Javamon {
         this.danho = danho;
         this.velocidad = velocidad;
         this.starter = starter;
-        this.ataques = ataques;
+        this.ataques = null;
         this.codigoEntrenador = 0;
+    }
+
+    //Constructor con parámetros con codigoEntrenador
+    public Javamon(int codigoJavamon, String nombre, Tipo tipo, String descripcion, int nivel, int salud, int danho, int velocidad, boolean starter, int codigoEntrenador) {
+        this.codigoJavamon = codigoJavamon;
+        this.nombre = nombre;
+        this.tipo = tipo;
+        this.descripcion = descripcion;
+        this.nivel = nivel;
+        this.salud = salud;
+        this.danho = danho;
+        this.velocidad = velocidad;
+        this.starter = starter;
+        this.ataques = null;
+        this.codigoEntrenador = codigoEntrenador;
     }
 
     //Getters and setters
@@ -114,6 +129,10 @@ public class Javamon {
 
     public Ataque[] getAtaques() {
         return ataques;
+    }
+
+    public void setAtaques(Ataque[] ataques) {
+        this.ataques = ataques;
     }
 
     public int getCodigoEntrenador() {

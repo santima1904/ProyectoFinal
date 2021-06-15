@@ -1,5 +1,6 @@
 package controlador;
 
+import com.sun.security.auth.UnixNumericUserPrincipal;
 import modelo.clasesAbstractas.Ataque;
 import modelo.clasesAbstractas.Entrenador;
 import modelo.clasesBasicas.Danho;
@@ -9,6 +10,7 @@ import modelo.dataaccess.DataAccess;
 import modelo.dataaccess.DataAccessEntrenador;
 import modelo.enums.Tipo;
 import vista.Mensajes;
+import vista.Validaciones;
 
 import java.sql.Connection;
 
@@ -33,7 +35,7 @@ public class Main {
         System.out.println(yo.getJavamonEquipo(1));
         Mensajes.verLista(yo.getEquipo());
 
-         */
+
         Connection conexion;
 
 
@@ -41,7 +43,19 @@ public class Main {
         System.out.println(DataAccessEntrenador.entrenadorCreado(conexion));
         //DataAccessEntrenador.borrarEntrenador(conexion);
         DataAccessEntrenador.addEntrenador(conexion, "Santi");
+        System.out.println(DataAccessEntrenador.getEntrenador(conexion, 2));
+        */
 
+        //Inicio programa
+        Connection conexion;
+        Entrenador entrenador;
+
+        conexion = DataAccess.abrirConexion("jdbc:sqlserver://localhost","Santi", "javamaniaco37");
+        Mensajes.menu();
+        entrenador = Gestora.obtenerEntrenador(conexion, Validaciones.pedirNombre());
+
+        System.out.println("Esta todo en resguardo");
     }
+
 
 }

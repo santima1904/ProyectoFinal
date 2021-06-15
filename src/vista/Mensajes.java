@@ -13,15 +13,17 @@ public class Mensajes {
     public static final String ATACAR = "";
     public static final String MODIFICAR = "";
     public static final String SUPER_EFICAZ = "El ataque es muy eficaz";
+    public static final String INICIO = "Buenas entrenador\n" +
+            "Bienvenido a Nervionia, la región en la que podrás demostrar tu valía y nivel.\n" +
+            "Antes de todo, como te llamas?\n";
+    public static final String ELECCION_MAQUINA = "Le ha salido ";
+    public static final String ELECCION_MAQUINA2 = "Que desea hacer?\n " +
+            "1. Quedartelo" + "2. Dejarlo";
+
+
 
     /**
-     * <b>Cabecera: </b> void verLista(List<Javamon> equipo) </br>
-     * <b>Precondiciones: </b> Lista de Javamons creada </br>
-     * <b>Entradas: </b> List<Javamons> </br>
-     * <b>Salida: </b> Ninguna </br>
-     * <b>Postcondiciones: </b> Muestra el contenido de la lista de javamons </br>
-     *
-     * @param equipo
+     * <b>Descripcion: </b> Muestra el contenido de la lista de javamons </br>
      */
     public static void verLista(List<Javamon> equipo){
         for (Javamon aux:equipo) {
@@ -41,7 +43,12 @@ public class Mensajes {
         System.out.println(SUPER_EFICAZ);
     }
 
-    public static void atacar(){
+    public static void atacar(){     }
 
+    public static void menu(){
+        System.out.println(INICIO);
+    }
+    public static void eleccionMaquina(){
+        System.out.println(INICIO);
     }
 }
